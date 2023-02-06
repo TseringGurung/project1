@@ -2,9 +2,17 @@
 #include <string>
 #include "book.hpp"
 
+    Book::Book(const std::string getTitle,const std::string getAuthor,const int getPageCount,const bool isDigital = false){
+        book_title = getTitle;
+        book_author = getAuthor;
+        page_count = getPageCount;
+        digital = true;
+    };
+
     void Book::setTitle(const std::string getTitle){
         book_title = getTitle;
     };
+
     std::string Book::getTitle() const{
         return book_title;
     };
@@ -27,16 +35,16 @@
         return page_count;
     };
 
-    void Book::setDigital(bool isDigital){
-        if(isDigital == 1){
-            digital = true;
-        }
-        else{
-            digital = false;
-        }
+    void Book::setDigital(){
+        digital = true;
     };
     
     bool Book::isDigital() const{
+        if(digital == 1){
+            return true;
+        }
+        else{
+            return false;
+        }
         return digital;
     }; 
-      
