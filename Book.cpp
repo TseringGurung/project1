@@ -2,12 +2,7 @@
 #include <string>
 #include "book.hpp"
 
-    Book::Book(const std::string getTitle,const std::string getAuthor,const int getPageCount,const bool isDigital = false){
-        book_title = getTitle;
-        book_author = getAuthor;
-        page_count = getPageCount;
-        digital = true;
-    };
+    
 
     void Book::setTitle(const std::string getTitle){
         book_title = getTitle;
