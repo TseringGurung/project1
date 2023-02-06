@@ -5,14 +5,14 @@
     void Book::setTitle(std::string getTitle){
         book_title = getTitle;
     }
-    std::string Book::getTitle() {
+    std::string Book::getTitle() const{
         return book_title;
     }
 
     void Book::setAuthor(std::string getAuthor){
         book_author = getAuthor;
     }
-    std::string Book::getAuthor() {
+    std::string Book::getAuthor() const{
         return book_author;
     }
 
@@ -21,7 +21,7 @@
             page_count = getPageCount;
         }
     }
-    int Book::getPageCount(){
+    int Book::getPageCount() const{
         return page_count;
     }
     void Book::setDigital(bool isDigital){
@@ -32,6 +32,6 @@
             digital = false;
         }
     }
-    bool Book::isDigital() {
+    bool Book::isDigital() const{
         return digital;
     }
