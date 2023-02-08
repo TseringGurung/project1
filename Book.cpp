@@ -9,43 +9,43 @@
         digital = false;
     }
 
-    Book::Book(const std::string getTitle,const std::string getAuthor,const int getPageCount,const bool isDigital){
-        book_title = getTitle;
-        book_author = getAuthor;
-        page_count = getPageCount;
-        digital = true;
+    Book::Book(const std::string Title,const std::string Author,const int PageCount,const bool Digital){
+        book_title = Title;
+        book_author = Author;
+        page_count = PageCount;
+        digital = Digital;
     }
 
-    void Book::setTitle(const std::string getTitle){
-        book_title = getTitle;
+    void Book::setTitle(const std::string Title){
+        this->book_title = Title;
     };
 
     std::string Book::getTitle() const{
-        return book_title;
+        return this->book_title;
     };
 
-    void Book::setAuthor(const std::string getAuthor){
-        book_author = getAuthor;
+    void Book::setAuthor(const std::string Author){
+        this->book_author = Author;
     };
 
     std::string Book::getAuthor() const{
-        return book_author;
+        return this->book_author;
     };
 
-    void Book::setPageCount(const int getPageCount){
-        if(getPageCount > 0){
-            page_count = getPageCount;
+    void Book::setPageCount(const int PageCount){
+        if(PageCount > 0){
+            this->page_count = PageCount;
         }
     };
 
     int Book::getPageCount() const{
-        return page_count;
+        return this->page_count;
     };
 
     void Book::setDigital(){
-        digital = true;
+        this->digital = true;
     };
     
     bool Book::isDigital() const{
-        return digital;
+        return this->digital;
     }; 
