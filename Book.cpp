@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "book.hpp"
+#include "Book.hpp"
 
     Book::Book(){
         book_title = "";
@@ -9,14 +9,14 @@
         digital = false;
     }
 
-    Book::Book(const std::string &Title,const std::string &Author,const int &PageCount,const bool &Digital){
+    Book::Book(const std::string Title,const std::string Author,const int PageCount,const bool Digital){
         book_title = Title;
         book_author = Author;
         page_count = PageCount;
         digital = Digital;
     }
 
-    void Book::setTitle(const std::string &Title){
+    void Book::setTitle(const std::string Title){
         this->book_title = Title;
     };
 
@@ -24,7 +24,7 @@
         return this->book_title;
     };
 
-    void Book::setAuthor(const std::string &Author){
+    void Book::setAuthor(const std::string Author){
         this->book_author = Author;
     };
 
@@ -32,7 +32,7 @@
         return this->book_author;
     };
 
-    void Book::setPageCount(const int &PageCount){
+    void Book::setPageCount(const int PageCount){
         if(PageCount > 0){
             this->page_count = PageCount;
         }
@@ -48,4 +48,4 @@
     
     bool Book::isDigital() const{
         return this->digital;
-    }; 
+    };
