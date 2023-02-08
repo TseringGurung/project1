@@ -1,5 +1,7 @@
 #ifndef BOOK_H
 #define BOOK_H
+#include <iostream>
+#include <string>
 
 class Book{
 
@@ -11,15 +13,15 @@ private:
 public:
     
     Book();
-    Book(const std::string &Title,const std::string &Author,const int &PageCount,const bool &Digital = false);
+    Book(const std::string Title,const std::string Author,const int PageCount,const bool Digital = false);
 
-    void setTitle(const std::string &Title);
+    void setTitle(const std::string Title);
     std::string getTitle() const;
     
-    void setAuthor(const std::string &Author);
+    void setAuthor(const std::string Author);
     std::string getAuthor() const;
    
-    void setPageCount(const int &PageCount);
+    void setPageCount(const int PageCount);
     int getPageCount() const;
 
     void setDigital();
